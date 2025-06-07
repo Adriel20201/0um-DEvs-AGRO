@@ -1,0 +1,124 @@
+/* just a simple css style with dark and light theme */
+body {
+    font-family: Arial, sans-serif;
+    transition: background 0.5s ease, color 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+body.fade-out {
+    opacity: 0;
+}
+
+body.light {
+    background: #f0f0f0;
+    color: #222;
+}
+
+body.light .container {
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+body.light .menu button,
+body.light input,
+body.light button[type="submit"] {
+    background-color: #e0e0e0;
+    color: #000;
+    border: 1px solid #ccc;
+}
+
+body.light .output {
+    background-color: #f9f9f9;
+    border: 1px solid #000;
+}
+
+body.dark {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+body.dark .container {
+    background: #1e1e1e;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark .menu button,
+body.dark input,
+body.dark button[type="submit"] {
+    background-color: #2c2c2c;
+    color: #f0f0f0;
+    border: 1px solid #555;
+}
+
+body.dark .menu button:hover,
+body.dark button[type="submit"]:hover {
+    background-color: #3c3c3c;
+}
+
+body.dark .output {
+    background-color: #2a2a2a;
+    border: 1px solid #666;
+}
+
+.container {
+    padding: 20px;
+    border-radius: 15px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.section {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label, input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.output {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#themeToggle {
+    align-self: flex-end;
+    font-size: 12px;
+    padding: 5px 10px;
+}
